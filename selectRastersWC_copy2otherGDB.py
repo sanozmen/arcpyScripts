@@ -2,9 +2,9 @@ import os
 import arcpy
 
 # Set environment settings
-rasterGDB=r'C:\Users\xxx\Desktop\xxx\xxxx\01 - Geodatabase\xx.gdb'
-#ur addition is the most important part of the line below. It helped to eliminate conflict of "str+unicode" join down below at os.path.join
-outRasterGDB = ur'C:\\Users\\xxxx\\Desktop\\1st\\xxx\\01 - Geodatabase\\xxxx.gdb'
+rasterGDB=r'copy/drag here your raster data'
+#ur addition is the most important part of the line below. ALSO \\ IS A MUST. It helped to eliminate conflict of "str+unicode" join down below at os.path.join
+outRasterGDB = ur'C:\\Users\\01 - Geodatabase\\XX'
 arcpy.env.workspace=rasterGDB
 #filter rasters based on name
 reprojRasters=arcpy.ListRasters("*rpj")
