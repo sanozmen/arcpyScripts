@@ -2,13 +2,13 @@ import os
 import arcpy
 
 # Set environment settings
-rasterGDB=r'copy/drag here your raster data'
+rasterGDB=r'C:\01 - Geodatabase\ClippedRasters.gdb'
 #ur addition is the most important part of the line below. ALSO \\ IS A MUST. It helped to eliminate conflict of "str+unicode" join down below at os.path.join
-outRasterGDB = ur'C:\\Users\\01 - Geodatabase\\XX'
+outRasterGDB = ur'C:\\01 - Geodatabase\\RpjRasters.gdb'
 arcpy.env.workspace=rasterGDB
 #filter rasters based on name
-reprojRasters=arcpy.ListRasters("*rpj")
-#check if correct images were selected
+reprojRasters=arcpy.ListRasters("rpj*")
+#check if correct images are filtered
 print reprojRasters
 
 for raster in reprojRasters:

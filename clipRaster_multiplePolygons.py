@@ -2,13 +2,13 @@ import os
 import arcpy
 
 #rasters to be clipped
-dem = 'copy/drag here your raster data'
-aws='copy/drag here your raster data'
-pd= r'copy/drag here your raster data'
+dem = 'add image1'
+aws='add image2'
+pd= r'add image3'
 
 # Polygon feature classes to be used
-layers =[]
-arcpy.env.workspace = r''
+layers =['add polygon layers']
+arcpy.env.workspace = r'add work space'
 #dem
 for layer in layers:
     #name output rasters
@@ -29,5 +29,5 @@ newRasters=arcpy.ListRasters()
 print newRasters
 #reprojecting them into ED50 Zone35N
 for raster in newRasters:
-    outputRaster2=raster+"rpj"
-    arcpy.ProjectRaster_management(raster,outputRaster2,'drag here the reference layer')
+    outputRaster2="rpj"+raster
+    arcpy.ProjectRaster_management(raster,outputRaster2,'add one layer to be used as Spatial reference')
