@@ -10,5 +10,5 @@ for raster in rasters:
     minRes = minResult.getOutput(0)
     maxRes = maxResult.getOutput(0)
     meanRes = meanResult.getOutput(0)
-    f = open(outputTxtFile, 'a+') #open the text file for writting
+    f = open(outputTxtFile, 'a+') #open the text file for writing
     f.write(raster+","+minRes+","+meanRes+","+maxRes+"\n")
